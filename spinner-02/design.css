@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner{
+    display: grid;
+    grid-template-areas: 'stack';
+}
+
+.dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: hotpink;
+    grid-area: stack;
+    animation: spinner 1s infinite alternate-reverse;
+}
+
+.dot:nth-child(2){
+    animation-delay: 337ms;
+}
+
+.dot:nth-child(3){
+    animation-delay: 667ms;
+}
+
+@keyframes spinner {
+    0%{
+        transform: translate(20px);
+    }
+
+    100%{
+        transform: translate(-20px);
+    }
+}
+
