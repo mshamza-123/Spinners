@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner{
+    width: 200px;
+    height: 200px;
+    animation: morph 2s infinite;
+}
+
+@keyframes morph {
+    0%, 100%{
+        border-radius: 50%;
+        background-color: hotpink;
+    }
+    50%{
+        border-radius: 0%;
+        transform: rotate(180deg);
+        background-color: rebeccapurple;
+    }
+}
